@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './src/screens/HomeScreen';
 import StateScreen from './src/screens/StateScreen';
 import StyleTableScreen from './src/screens/StyleTableScreen';
+import ApiScreen from "./src/screens/ApiScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,13 @@ export default function App() {
           component={StyleTableScreen}
           options={{ title: 'Aula: Estilização' }}
         />
+          <Stack.Screen
+              name="Api"
+              component={ApiScreen}
+              options={{title: 'Hooks: useEffect + API'}}
+              />
+
+
       </Stack.Navigator>
     </NavigationContainer>
   );

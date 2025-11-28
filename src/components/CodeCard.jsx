@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Switch, ScrollView, Platform } from 'react-native';
+import SyntaxHighlight from './SyntaxHighlight';
 
 export default function CodeCard({ title, description, codeSnippet, children }) {
     // State para controlar a alternância entre Visual e Código
@@ -34,7 +35,7 @@ export default function CodeCard({ title, description, codeSnippet, children }) 
                     // MODO CÓDIGO: Simula um editor escuro
                     <View style={styles.codeContainer}>
                         <ScrollView nestedScrollEnabled={true}>
-                            <Text style={styles.codeText}>{codeSnippet}</Text>
+                            <SyntaxHighlight>{codeSnippet}</SyntaxHighlight>
                         </ScrollView>
                     </View>
                 ) : (
