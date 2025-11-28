@@ -7,6 +7,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import StateScreen from './src/screens/StateScreen';
 import StyleTableScreen from './src/screens/StyleTableScreen';
 import ApiScreen from "./src/screens/ApiScreen";
+import CalculatorScreen from "./src/screens/CalculatorScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,7 +33,7 @@ export default function App() {
           options={{ title: 'Aula: Hooks & State' }}
         />
         <Stack.Screen
-          name="Style"
+          name="StyleTable"
           component={StyleTableScreen}
           options={{ title: 'Aula: Estilização' }}
         />
@@ -41,8 +42,11 @@ export default function App() {
               component={ApiScreen}
               options={{title: 'Hooks: useEffect + API'}}
               />
-
-
+          <Stack.Screen
+              name="Calculator"
+              component={CalculatorScreen}
+              options={{ title: 'Projeto: Calculadora' }}
+          />
       </Stack.Navigator>
     </NavigationContainer>
   );
