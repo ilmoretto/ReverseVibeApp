@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // Importando as telas
 import HomeScreen from './src/screens/HomeScreen';
 import StateScreen from './src/screens/StateScreen';
-import StyleScreen from './src/screens/StyleScreen';
+import StyleTableScreen from './src/screens/StyleTableScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,7 +32,7 @@ export default function App() {
         />
         <Stack.Screen
           name="Style"
-          component={StyleScreen}
+          component={StyleTableScreen}
           options={{ title: 'Aula: Estilização' }}
         />
       </Stack.Navigator>
